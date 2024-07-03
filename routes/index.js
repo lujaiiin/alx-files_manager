@@ -3,6 +3,7 @@ import UsersController from '../controllers/UsersController';
 import AuthController from '../controllers/AuthController';
 import FilesController from '../controllers/FilesController';
 
+// Function to register routes dynamically
 function routes(app) {
   app.get('/status', AppController.getStatus);
   app.get('/stats', AppController.getStats);
@@ -18,5 +19,6 @@ function routes(app) {
   app.get('/files/:id/data', FilesController.getFile);
 }
 
+// Exporting the dynamicRoutes function
 export default routes;
 module.exports = routes;
